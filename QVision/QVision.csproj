@@ -11,12 +11,13 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
+    <Optimize>true</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
@@ -37,6 +38,9 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\x_ray4_tools\P1_CMMT\bin\Debug\System.Data.SQLite.DLL</HintPath>
+    </Reference>
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
@@ -93,6 +97,7 @@
       <DependentUpon>VideoFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="ImgProcess\Project.cs" />
+    <Compile Include="Params\Common.cs" />
     <Compile Include="Params\Global.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -103,6 +108,12 @@
       <DependentUpon>RegFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Register\SoftReg.cs" />
+    <Compile Include="Report\DataShowCtr.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Report\DataShowCtr.Designer.cs">
+      <DependentUpon>DataShowCtr.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report\ReportFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,8 +121,10 @@
       <DependentUpon>ReportFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Tools\CSVManger.cs" />
+    <Compile Include="Tools\DataBaseTool.cs" />
     <Compile Include="Tools\IniFile.cs" />
     <Compile Include="Tools\LogManager.cs" />
+    <Compile Include="Tools\SaveRecipe.cs" />
     <Compile Include="VisionTools\BParamTool\BParamToolCtr.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -160,6 +173,9 @@
     <EmbeddedResource Include="Register\RegFrm.resx">
       <DependentUpon>RegFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\DataShowCtr.resx">
+      <DependentUpon>DataShowCtr.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\ReportFrm.resx">
       <DependentUpon>ReportFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,6 +185,7 @@
     <EmbeddedResource Include="VisionTools\MatchTool\MatchToolCtr.resx">
       <DependentUpon>MatchToolCtr.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -235,6 +252,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\qq7new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\38.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\23.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

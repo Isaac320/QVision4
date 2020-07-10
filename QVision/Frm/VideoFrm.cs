@@ -15,7 +15,6 @@ namespace QVision.Frm
         {
             InitializeComponent();
         }
-
         private void bt_go_Click(object sender, EventArgs e)
         {
             using (InitFrm initfrm = new InitFrm())
