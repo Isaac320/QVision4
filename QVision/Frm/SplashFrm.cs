@@ -11,9 +11,24 @@ namespace QVision.Frm
 {
     public partial class SplashFrm : Form
     {
+        public static int num = 0;
+        public static string info = "载入中...";
         public SplashFrm()
         {
             InitializeComponent();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (num >= 0 && num < 100)
+            {
+                progressBar1.Value = num;
+                label1.Text = info;
+            }
+            else
+            {
+                this.Close();
+            }
         }
     }
 }

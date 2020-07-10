@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using QVision.Tools;
+using System.Threading;
 
 namespace QVision
 {
@@ -13,9 +15,28 @@ namespace QVision
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainFrm());
+            try
+            {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+
+                Thread t = new Thread(ShowSplashFrm);
+                t.Start();
+                Thread.Sleep(100);
+
+                Application.Run(new MainFrm());
+            }
+            catch (Exception ee)
+            {
+                LogManager.WriteLog(ee.Message);
+                LogManager.WriteLog(ee.StackTrace);
+            }
+        }
+
+        static void ShowSplashFrm()
+        {
+            Frm.SplashFrm splash = new Frm.SplashFrm();
+            splash.ShowDialog();
         }
     }
 }

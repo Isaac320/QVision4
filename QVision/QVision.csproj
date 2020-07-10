@@ -56,6 +56,12 @@
       <DependentUpon>AboutFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm\Frames.cs" />
+    <Compile Include="Frm\InitFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\InitFrm.Designer.cs">
+      <DependentUpon>InitFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm\MainFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,7 +92,8 @@
     <Compile Include="Frm\VideoFrm.Designer.cs">
       <DependentUpon>VideoFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ImgProcess\ImgProcess.cs" />
+    <Compile Include="ImgProcess\Project.cs" />
+    <Compile Include="Params\Global.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register\RegFrm.cs">
@@ -96,9 +103,22 @@
       <DependentUpon>RegFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Register\SoftReg.cs" />
+    <Compile Include="Report\ReportFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\ReportFrm.Designer.cs">
+      <DependentUpon>ReportFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tools\CSVManger.cs" />
     <Compile Include="Tools\IniFile.cs" />
     <Compile Include="Tools\LogManager.cs" />
+    <Compile Include="VisionTools\BParamTool\BParamToolCtr.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisionTools\BParamTool\BParamToolCtr.Designer.cs">
+      <DependentUpon>BParamToolCtr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisionTools\BParamTool\BParamTool.cs" />
     <Compile Include="VisionTools\MatchTool\MatchTool.cs" />
     <Compile Include="VisionTools\MatchTool\MatchToolCtr.cs">
       <SubType>UserControl</SubType>
@@ -108,6 +128,9 @@
     </Compile>
     <EmbeddedResource Include="Frm\AboutFrm.resx">
       <DependentUpon>AboutFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\InitFrm.resx">
+      <DependentUpon>InitFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm\MainFrm.resx">
       <DependentUpon>MainFrm.cs</DependentUpon>
@@ -136,6 +159,12 @@
     </Compile>
     <EmbeddedResource Include="Register\RegFrm.resx">
       <DependentUpon>RegFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportFrm.resx">
+      <DependentUpon>ReportFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisionTools\BParamTool\BParamToolCtr.resx">
+      <DependentUpon>BParamToolCtr.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VisionTools\MatchTool\MatchToolCtr.resx">
       <DependentUpon>MatchToolCtr.cs</DependentUpon>
@@ -186,6 +215,26 @@
   <ItemGroup>
     <None Include="Resources\camera.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\a.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\102.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\69.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\145.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\46.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qq7new.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

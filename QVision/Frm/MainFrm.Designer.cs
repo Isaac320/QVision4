@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
@@ -38,6 +36,8 @@
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助文档ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -56,32 +56,16 @@
             this.toolStripMenuItem5});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(84, 645);
+            this.menuStrip1.Size = new System.Drawing.Size(126, 645);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(84, 623);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1152, 22);
-            this.statusStrip1.TabIndex = 3;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(71, 17);
-            this.toolStripStatusLabel1.Text = "Pirate Club";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Image = global::QVision.Properties.Resources._10;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(71, 81);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(113, 81);
             this.toolStripMenuItem1.Text = "主页";
             this.toolStripMenuItem1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
@@ -91,7 +75,7 @@
             this.toolStripMenuItem2.Image = global::QVision.Properties.Resources._2;
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(71, 81);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(113, 81);
             this.toolStripMenuItem2.Text = "配方编辑";
             this.toolStripMenuItem2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
@@ -101,7 +85,7 @@
             this.toolStripMenuItem3.Image = global::QVision.Properties.Resources._41;
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
             this.toolStripMenuItem3.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(71, 81);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(113, 81);
             this.toolStripMenuItem3.Text = "设置";
             this.toolStripMenuItem3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
@@ -111,9 +95,10 @@
             this.toolStripMenuItem4.Image = global::QVision.Properties.Resources._58;
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
             this.toolStripMenuItem4.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(71, 81);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(113, 81);
             this.toolStripMenuItem4.Text = "报告";
             this.toolStripMenuItem4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
             // toolStripMenuItem5
             // 
@@ -123,7 +108,7 @@
             this.toolStripMenuItem5.Image = global::QVision.Properties.Resources._337;
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
             this.toolStripMenuItem5.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(71, 81);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(113, 81);
             this.toolStripMenuItem5.Text = "帮助";
             this.toolStripMenuItem5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
@@ -139,6 +124,22 @@
             this.关于ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
             this.关于ToolStripMenuItem.Text = "关于";
             this.关于ToolStripMenuItem.Click += new System.EventHandler(this.关于ToolStripMenuItem_Click);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+            this.statusStrip1.Location = new System.Drawing.Point(126, 623);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1110, 22);
+            this.statusStrip1.TabIndex = 3;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(71, 17);
+            this.toolStripStatusLabel1.Text = "Pirate Club";
             // 
             // MainFrm
             // 

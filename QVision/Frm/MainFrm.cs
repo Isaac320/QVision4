@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using QVision.Frm;
+using QVision.Report;
+using System.Threading;
 
 namespace QVision
 {
@@ -65,14 +67,22 @@ namespace QVision
 
         private void MainFrm_Load(object sender, EventArgs e)
         {
+            SplashFrm.num = 30;
             Frames.videoFrm = new VideoFrm();
             Frames.recipeFrm = new RecipeFrm();
             Frames.settingFrm = new SettingFrm();
+            Frames.reportFrm = new ReportFrm();
+            SplashFrm.num = 60;
+            Thread.Sleep(1200);
+            SplashFrm.num = 100;
+
+            this.WindowState = FormWindowState.Maximized;
+            this.Visible = true;
             Frames.videoFrm.MdiParent = this;
             Frames.videoFrm.Dock = DockStyle.Fill;
             Frames.videoFrm.Show();
             Frames.videoFrm.Activate();
-            this.WindowState = FormWindowState.Maximized;
+            
         }
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
@@ -115,6 +125,28 @@ namespace QVision
             else
             {
                 e.Cancel = true;
+            }
+        }
+
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+                if (this.ActiveMdiChild == Frames.reportFrm)
+                {
+                    Cursor.Current = Cursors.Arrow;
+                    return;
+                }
+                Frames.reportFrm.MdiParent = this;
+                Frames.reportFrm.Dock = DockStyle.Fill;
+                Frames.reportFrm.Show();
+                Frames.reportFrm.Activate();
+                Cursor.Current = Cursors.Arrow;
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.ToString());
             }
         }
     }
