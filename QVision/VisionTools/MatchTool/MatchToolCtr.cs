@@ -94,34 +94,41 @@ namespace QVision.VisionTools.MatchTool
 
         private void Search()
         {
-            tool.Regions.Clear();
-            listBox1.Items.Clear();
-            hSmartWindowControl1.HalconWindow.ClearWindow();
-            hSmartWindowControl1.HalconWindow.DispImage(tool.himage);
-            DrawTrainRegions();
-
-            tool.minScore = double.Parse(txtbox_minscore.Text);
-            tool.numMatches = int.Parse(txt_numMatch.Text);
-            tool.Run();
-            int num = tool.Score.Length;
-            for (int i = 0; i < num; i++)
+            try
             {
-                HXLDCont cross = new HXLDCont();
-                cross.GenCrossContourXld(tool.Row[i].D, tool.Column[i].D, 66, 0);
-                hSmartWindowControl1.HalconWindow.DispXld(cross);
-                listBox1.Items.Add("Score" + (i + 1).ToString() + ":" + tool.Score[i].D.ToString());
-                HHomMat2D homMat2D = new HHomMat2D();
-                homMat2D.VectorAngleToRigid(tool.Row[0].D, tool.Column[0].D, 0, tool.Row[i].D, tool.Column[i].D, 0);
-                HRegion rectange = new HRegion(tool.searchRect[0], tool.searchRect[1], tool.searchRect[2], tool.searchRect[3]);
-                HRegion rect2 = rectange.AffineTransRegion(homMat2D, "nearest_neighbor");
-                tool.Regions.Add(rect2);
+                tool.Regions.Clear();
+                listBox1.Items.Clear();
+                hSmartWindowControl1.HalconWindow.ClearWindow();
+                hSmartWindowControl1.HalconWindow.DispImage(tool.himage);
+                DrawTrainRegions();
+
+                tool.minScore = double.Parse(txtbox_minscore.Text);
+                tool.numMatches = int.Parse(txt_numMatch.Text);
+                tool.Run();
+                int num = tool.Score.Length;
+                for (int i = 0; i < num; i++)
+                {
+                    HXLDCont cross = new HXLDCont();
+                    cross.GenCrossContourXld(tool.Row[i].D, tool.Column[i].D, 66, 0);
+                    hSmartWindowControl1.HalconWindow.DispXld(cross);
+                    listBox1.Items.Add("Score" + (i + 1).ToString() + ":" + tool.Score[i].D.ToString());
+                    HHomMat2D homMat2D = new HHomMat2D();
+                    homMat2D.VectorAngleToRigid(tool.Row[0].D, tool.Column[0].D, 0, tool.Row[i].D, tool.Column[i].D, 0);
+                    HRegion rectange = new HRegion(tool.searchRect[0], tool.searchRect[1], tool.searchRect[2], tool.searchRect[3]);
+                    HRegion rect2 = rectange.AffineTransRegion(homMat2D, "nearest_neighbor");
+                    tool.Regions.Add(rect2);
+                }
+
+                foreach (HRegion r in tool.Regions)
+                {
+                    hSmartWindowControl1.HalconWindow.SetColor("green");
+                    hSmartWindowControl1.HalconWindow.SetDraw("margin");
+                    hSmartWindowControl1.HalconWindow.DispRegion(r);
+                }
             }
-
-            foreach (HRegion r in tool.Regions)
+            catch(Exception ee)
             {
-                hSmartWindowControl1.HalconWindow.SetColor("green");
-                hSmartWindowControl1.HalconWindow.SetDraw("margin");
-                hSmartWindowControl1.HalconWindow.DispRegion(r);
+                MessageBox.Show(ee.ToString());
             }
         }
 
