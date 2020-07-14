@@ -123,6 +123,16 @@ namespace QVision.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap _25 {
+            get {
+                object obj = ResourceManager.GetObject("25", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap _29 {
             get {
                 object obj = ResourceManager.GetObject("29", resourceCulture);
@@ -206,6 +216,16 @@ namespace QVision.Properties {
         internal static System.Drawing.Bitmap _69 {
             get {
                 object obj = ResourceManager.GetObject("69", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap _77 {
+            get {
+                object obj = ResourceManager.GetObject("77", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

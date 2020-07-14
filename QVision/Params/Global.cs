@@ -74,5 +74,8 @@ namespace QVision.Params
         public static int frameIndex = 1;
         public string unitContent = null;
 
+
+        public static bool needLook = false;  //是否需要人工判断，就是NG时候跳出个对话框
+
     }
 }

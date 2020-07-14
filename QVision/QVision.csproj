@@ -144,6 +144,7 @@
     <Compile Include="Tools\FileTool.cs" />
     <Compile Include="Tools\IniFile.cs" />
     <Compile Include="Tools\LogManager.cs" />
+    <Compile Include="Tools\MyConfig.cs" />
     <Compile Include="Tools\SaveRecipe.cs" />
     <Compile Include="VisionTools\BParamTool\BParamToolCtr.cs">
       <SubType>UserControl</SubType>
@@ -287,6 +288,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\77.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\25.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
