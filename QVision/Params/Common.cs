@@ -15,4 +15,22 @@ namespace QVision.Params
     class Common
     {
     }
+
+    enum MachineState
+    {
+        Run,
+        Free
+    }
+
+    enum PauseState
+    {
+        Run,
+        Pause
+    }
+
+    enum WorkState
+    {
+        Work,
+        Free
+    }
 }

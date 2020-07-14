@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using QVision.Params;
+using QVision.Tools;
 
 namespace QVision.Frm
 {
     public partial class VideoFrm : Form
     {
+        delegate void delegateShowMessage(string s);
         public VideoFrm()
         {
             InitializeComponent();
@@ -73,6 +75,32 @@ namespace QVision.Frm
                 this.listView1.Items.Add(lvi);
                 this.listView1.EndUpdate();
 
+            }
+        }
+
+        public void listBoxShowMessage(string s)
+        {
+            if (listBox1.InvokeRequired)
+            {
+                BeginInvoke(new delegateShowMessage(listBoxShowMessage), new object[] { s });
+
+            }
+            else
+            {
+                string mystring = DateTime.Now.ToString("HH:mm:ss") + " " + s;
+                listBox1.Items.Add(mystring);
+
+                //写log
+                LogManager.WriteLog(s);
+
+                if (listBox1.Items.Count > 200)
+                {
+                    for (int i = 80; i > -1; i--)
+                    {
+                        listBox1.Items.RemoveAt(i);
+                    }
+                }
+                listBox1.TopIndex = listBox1.Items.Count - 1;
             }
         }
 

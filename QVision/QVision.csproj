@@ -59,6 +59,18 @@
     <Compile Include="Frm\AboutFrm.Designer.cs">
       <DependentUpon>AboutFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm\EndLotFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\EndLotFrm.Designer.cs">
+      <DependentUpon>EndLotFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\EndTrayFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\EndTrayFrm.Designer.cs">
+      <DependentUpon>EndTrayFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm\Frames.cs" />
     <Compile Include="Frm\InitFrm.cs">
       <SubType>Form</SubType>
@@ -89,6 +101,12 @@
     </Compile>
     <Compile Include="Frm\SplashFrm.Designer.cs">
       <DependentUpon>SplashFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\TrayIDFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\TrayIDFrm.Designer.cs">
+      <DependentUpon>TrayIDFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm\VideoFrm.cs">
       <SubType>Form</SubType>
@@ -123,6 +141,7 @@
     <Compile Include="Tools\CSVManger.cs" />
     <Compile Include="Tools\D2RManager.cs" />
     <Compile Include="Tools\DataBaseTool.cs" />
+    <Compile Include="Tools\FileTool.cs" />
     <Compile Include="Tools\IniFile.cs" />
     <Compile Include="Tools\LogManager.cs" />
     <Compile Include="Tools\SaveRecipe.cs" />
@@ -143,6 +162,12 @@
     <EmbeddedResource Include="Frm\AboutFrm.resx">
       <DependentUpon>AboutFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm\EndLotFrm.resx">
+      <DependentUpon>EndLotFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\EndTrayFrm.resx">
+      <DependentUpon>EndTrayFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm\InitFrm.resx">
       <DependentUpon>InitFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,6 +182,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm\SplashFrm.resx">
       <DependentUpon>SplashFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\TrayIDFrm.resx">
+      <DependentUpon>TrayIDFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm\VideoFrm.resx">
       <DependentUpon>VideoFrm.cs</DependentUpon>

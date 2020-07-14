@@ -29,7 +29,6 @@ namespace QVision.Frm
                 if (textBox3.Text.Trim() == "") tempFlag = false;
                 if (textBox4.Text.Trim() == "") tempFlag = false;
 
-
                 if (tempFlag)
                 {
                     //测试是否有相应的receipt
