@@ -68,6 +68,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "TrayIDFrm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "TrayIDFrm";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -146,7 +146,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(88, 93);
             this.button3.TabIndex = 1;
-            this.button3.Text = "保存";
+            this.button3.Text = "Save Recipe";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // panel8
@@ -165,7 +165,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(88, 93);
             this.button2.TabIndex = 0;
-            this.button2.Text = "读取";
+            this.button2.Text = "Read Recipe";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // panel5
@@ -183,10 +183,6 @@
             this.listBox1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 21;
-            this.listBox1.Items.AddRange(new object[] {
-            "预填参数",
-            "匹配工具",
-            "检测线工具"});
             this.listBox1.Location = new System.Drawing.Point(0, 0);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(188, 538);
@@ -209,7 +205,7 @@
             this.bt_readImg.Name = "bt_readImg";
             this.bt_readImg.Size = new System.Drawing.Size(188, 68);
             this.bt_readImg.TabIndex = 0;
-            this.bt_readImg.Text = "读图";
+            this.bt_readImg.Text = "Read Image";
             this.bt_readImg.UseVisualStyleBackColor = true;
             this.bt_readImg.Click += new System.EventHandler(this.bt_readImg_Click);
             // 
@@ -265,7 +261,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(188, 100);
             this.button4.TabIndex = 1;
-            this.button4.Text = "测试";
+            this.button4.Text = "Test Recipe";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // panel2

@@ -12,7 +12,7 @@ namespace QVision.Frm
     public partial class SplashFrm : Form
     {
         public static int num = 0;
-        public static string info = "载入中...";
+        public static string info = "loading...";
         public SplashFrm()
         {
             InitializeComponent();

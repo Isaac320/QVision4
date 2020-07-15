@@ -127,9 +127,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(810, 137);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 16);
+            this.label5.Size = new System.Drawing.Size(48, 16);
             this.label5.TabIndex = 23;
-            this.label5.Text = "查询";
+            this.label5.Text = "Query";
             // 
             // bt_Query
             // 

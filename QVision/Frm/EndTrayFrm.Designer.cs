@@ -68,11 +68,11 @@
             // 
             this.lb_noProcess.AutoSize = true;
             this.lb_noProcess.ForeColor = System.Drawing.Color.Red;
-            this.lb_noProcess.Location = new System.Drawing.Point(44, 478);
+            this.lb_noProcess.Location = new System.Drawing.Point(40, 466);
             this.lb_noProcess.Name = "lb_noProcess";
-            this.lb_noProcess.Size = new System.Drawing.Size(149, 12);
+            this.lb_noProcess.Size = new System.Drawing.Size(185, 12);
             this.lb_noProcess.TabIndex = 10;
-            this.lb_noProcess.Text = "托盘未处理，请处理完继续";
+            this.lb_noProcess.Text = "Reject has not been processed!";
             this.lb_noProcess.Visible = false;
             // 
             // label4
@@ -99,7 +99,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(120, 64);
             this.button1.TabIndex = 7;
-            this.button1.Text = "继续";
+            this.button1.Text = "continue";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -120,7 +120,7 @@
             this.MinimizeBox = false;
             this.Name = "EndTrayFrm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "托盘完成";
+            this.Text = "Tray Finish";
             this.ResumeLayout(false);
             this.PerformLayout();
 

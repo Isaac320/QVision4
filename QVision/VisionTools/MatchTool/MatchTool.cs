@@ -21,6 +21,9 @@ namespace QVision.VisionTools.MatchTool
         private string message = null;
         private HShapeModel myShapeModel = null;
 
+        private HHomMat2D homMat;
+
+
         public double minScore = 0.5;
         public int numMatches = 1;
 
@@ -41,6 +44,8 @@ namespace QVision.VisionTools.MatchTool
         public HTuple Angle { get { return angle; } }
         public HTuple Score { get { return score; } }
         public HXLDCont Xld { get { return myShapeModel.GetShapeModelContours(1); } }
+
+        public HHomMat2D HomMat { get { return homMat; } }
 
         public HImage Image
         {
@@ -82,7 +87,7 @@ namespace QVision.VisionTools.MatchTool
         /// </summary>
         /// <param name="hRegion"></param>
         /// <returns></returns>
-        public bool Run(HRegion hRegion, out HImage outImage, out HHomMat2D homMat)
+        public bool Run(HRegion hRegion, out HImage outImage)
         {
             try
             {

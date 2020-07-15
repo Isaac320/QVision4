@@ -28,7 +28,7 @@ namespace QVision.Frm
                 switch (listBox1.SelectedItem.ToString())
                 {
                     case Global.ToolName1:
-                        VisionTools.BParamTool.BParamTool bParamTool = (VisionTools.BParamTool.BParamTool)Dict["预填参数"];
+                        VisionTools.BParamTool.BParamTool bParamTool = (VisionTools.BParamTool.BParamTool)Dict[Global.ToolName1];
                         VisionTools.BParamTool.BParamToolCtr bParamToolCtr = new VisionTools.BParamTool.BParamToolCtr(bParamTool);
                         panel2.Controls.Clear();
                         panel2.Controls.Add(bParamToolCtr);
@@ -36,7 +36,7 @@ namespace QVision.Frm
                         break;
                     case Global.ToolName2:
                       //  VisionTools.MacthTool.MatchTool matchTool = (VisionTools.MacthTool.MatchTool)Dict["匹配工具"]; 
-                        VisionTools.MatchTool.MatchTool matchTool= (VisionTools.MatchTool.MatchTool)Dict["匹配工具"];
+                        VisionTools.MatchTool.MatchTool matchTool= (VisionTools.MatchTool.MatchTool)Dict[Global.ToolName2];
 
                         if (hImage != null)
                         {
@@ -61,10 +61,16 @@ namespace QVision.Frm
         private void RecipeFrm_Load(object sender, EventArgs e)
         {
             VisionTools.BParamTool.BParamTool bParamTool = new VisionTools.BParamTool.BParamTool();
-            Dict.Add("预填参数", bParamTool);
+            Dict.Add(Global.ToolName1, bParamTool);
 
             VisionTools.MatchTool.MatchTool matchTool = new VisionTools.MatchTool.MatchTool();
-            Dict.Add("匹配工具", matchTool);
+            Dict.Add(Global.ToolName2, matchTool);
+
+            listBox1.Items.Add(Global.ToolName1);
+            listBox1.Items.Add(Global.ToolName2);
+            listBox1.Items.Add(Global.ToolName3);
+
+
         }
 
         private void bt_readImg_Click(object sender, EventArgs e)

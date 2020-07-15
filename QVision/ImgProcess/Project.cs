@@ -8,11 +8,42 @@ using HalconDotNet;
 using System.Windows.Forms;
 using QVision.Frm;
 using QVision.Tools;
+using System.Threading;
 
 namespace QVision.ImgProcess
 {
     class Project
     {
+
+        Thread ImageProcessTh;  //图像处理总线程 
+
+        public void Init()
+        {
+            ImageProcessTh = new Thread(machineRun);
+            ImageProcessTh.IsBackground = true;
+            ImageProcessTh.Start();
+
+        }
+
+
+        public void machineRun()
+        {
+            while (Global.BigFlag)
+            {
+                switch (Global.mMState)
+                {
+                    case MachineState.Run:
+                        Run();  //处理方法
+                        break;
+                    case MachineState.Free:
+                        Thread.Sleep(100);  //空跑
+                        break;
+                    default:
+                        Thread.Sleep(100);  //空跑
+                        break;
+                }
+            }
+        }
         public void Run()
         {
             //清楚上一次的所有结果
@@ -78,7 +109,13 @@ namespace QVision.ImgProcess
                             //读取图像
                             HImage hImage = new HImage(ImageFullName);
 
-
+                            //下面随便写个处理过程 无处理
+                            for (int i = 0; i < 6; i++)
+                            {
+                                Frames.videoFrm.showImage(hImage, 1);
+                                FrameResultArr[numFrameResultArr] = 1;
+                                numFrameResultArr++;
+                            }
                             #region   处理过程 需要重写
 
                             //        //循环读取region，并处理
@@ -178,6 +215,7 @@ namespace QVision.ImgProcess
                             // 这里写新的处理方法  用编辑recipe的方式
                         }
 
+                    }
 
                         //把结果保存到托盘数据里
                         TrayResult.Add(FrameResultArr);
@@ -201,7 +239,7 @@ namespace QVision.ImgProcess
                 //这里是整个lot处理完了  EndLot方法
                 EndLot();
 
-            }
+            
 
         }
         /// <summary>

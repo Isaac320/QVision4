@@ -35,9 +35,17 @@ namespace QVision.Frm
                     string rpt = D2RManager.QueryReceipt(textBox2.Text);
                     if (rpt != null)
                     {
-                        
-                        DialogResult = DialogResult.OK;
+
+                        //都满足则就运行下面的。
+                        Global.LotNum = textBox1.Text;
+                        Global.Device = textBox2.Text;
+                        Global.OperatorID = textBox3.Text;
+                        Global.TotalFrame = int.Parse(textBox4.Text);
+                        Global.RecipeName = rpt;
+
                         Global.ready2Go = true;    //准备就绪，开始按钮可以跑
+
+                        DialogResult = DialogResult.OK;                      
                     }
                     else
                     {

@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using QVision.Params;
 using QVision.Tools;
+using HalconDotNet;
 
 namespace QVision.Frm
 {
@@ -26,12 +27,41 @@ namespace QVision.Frm
                 {
                     if (initfrm.ShowDialog() == DialogResult.OK)
                     {
-                        //showList();
+                        ShowList();
                     }
+                }
+            }
+
+            if (Global.ready2Go)
+            {
+                if (Global.mySwitch1)
+                {
+                    Global.mySwitch1 = false;
+                    listBoxShowMessage("继续工作");
+                }
+
+                if (Global.mMState == MachineState.Free)
+                {
+                    listBoxShowMessage("开始工作");
+                    Global.mMState = MachineState.Run;
                 }
             }
         }
 
+        public void showImage(HObject obj, int index)
+        {
+            HOperatorSet.SetDraw(hSmartWindowControl1.HalconWindow, "margin");
+            HOperatorSet.SetLineWidth(hSmartWindowControl1.HalconWindow, 2);
+            if (index == 1)
+            {
+                HOperatorSet.SetColor(hSmartWindowControl1.HalconWindow, "red");
+            }
+            else
+            {
+                HOperatorSet.SetColor(hSmartWindowControl1.HalconWindow, "red");
+            }
+            hSmartWindowControl1.HalconWindow.DispObj(obj);
+        }
 
         public void ShowList()
         {
@@ -104,6 +134,27 @@ namespace QVision.Frm
             }
         }
 
+        private void bt_pause_Click(object sender, EventArgs e)
+        {
+            if (Global.ready2Go)
+            {
+                Global.mySwitch1 = true;
+                listBoxShowMessage("暂停");
+            }
+        }
 
+        private void bt_step_Click(object sender, EventArgs e)
+        {
+            if (Global.ready2Go)
+            {
+                Global.mySwitch2 = false;
+                listBoxShowMessage("单步");
+            }
+        }
+
+        private void hSmartWindowControl1_Load(object sender, EventArgs e)
+        {
+            hSmartWindowControl1.MouseWheel += hSmartWindowControl1.HSmartWindowControl_MouseWheel;
+        }
     }
 }

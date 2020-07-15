@@ -13,7 +13,9 @@ using System.Threading;
 namespace QVision
 {
     public partial class MainFrm : Form
-    {        
+    {
+
+        ImgProcess.Project project = new ImgProcess.Project();   //图像处理函数
         public MainFrm()
         {
             InitializeComponent();
@@ -82,7 +84,11 @@ namespace QVision
             Frames.videoFrm.Dock = DockStyle.Fill;
             Frames.videoFrm.Show();
             Frames.videoFrm.Activate();
-            
+
+            project.Init();
+
+
+
         }
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)

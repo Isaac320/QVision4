@@ -7,9 +7,9 @@ namespace QVision.Params
 {
     class Global
     {
-        public const string ToolName1 = "预填参数";
-        public const string ToolName2 = "匹配工具";
-        public const string ToolName3 = "线检测工具";
+        public const string ToolName1 = "Pre Params";
+        public const string ToolName2 = "Match Tool";
+        public const string ToolName3 = "Check Lines Tool";
 
 
         public static string LotNum = "xxx";
@@ -75,7 +75,11 @@ namespace QVision.Params
         public string unitContent = null;
 
 
+        public static bool BigFlag = true; //用来终结图像处理那个循环的，一般都为true，关软件时候才设为false。
+
         public static bool needLook = false;  //是否需要人工判断，就是NG时候跳出个对话框
+
+        public static int needLookNum = 0;  //人工判断后，选择的数字，用来记录到那个数组里
 
     }
 }

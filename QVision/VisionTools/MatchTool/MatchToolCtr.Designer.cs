@@ -30,18 +30,18 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.hSmartWindowControl1 = new HalconDotNet.HSmartWindowControl();
-            this.label1 = new System.Windows.Forms.Label();
-            this.hSmartWindowControl2 = new HalconDotNet.HSmartWindowControl();
-            this.button1 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_numMatch = new System.Windows.Forms.TextBox();
             this.txtbox_minscore = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.hSmartWindowControl2 = new HalconDotNet.HSmartWindowControl();
+            this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -72,20 +72,6 @@
             this.panel1.Size = new System.Drawing.Size(1180, 994);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.listBox1);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.groupBox1);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.hSmartWindowControl2);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(1189, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(308, 994);
-            this.panel2.TabIndex = 1;
-            // 
             // hSmartWindowControl1
             // 
             this.hSmartWindowControl1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -105,43 +91,38 @@
             this.hSmartWindowControl1.WindowSize = new System.Drawing.Size(1180, 994);
             this.hSmartWindowControl1.Load += new System.EventHandler(this.hSmartWindowControl1_Load);
             // 
-            // label1
+            // panel2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微软雅黑", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(52, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(210, 41);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "匹配定位工具";
+            this.panel2.Controls.Add(this.listBox1);
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.groupBox1);
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.hSmartWindowControl2);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(1189, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(308, 994);
+            this.panel2.TabIndex = 1;
             // 
-            // hSmartWindowControl2
+            // listBox1
             // 
-            this.hSmartWindowControl2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.hSmartWindowControl2.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.hSmartWindowControl2.HDoubleClickToFitContent = true;
-            this.hSmartWindowControl2.HDrawingObjectsModifier = HalconDotNet.HSmartWindowControl.DrawingObjectsModifier.None;
-            this.hSmartWindowControl2.HImagePart = new System.Drawing.Rectangle(0, 0, 640, 480);
-            this.hSmartWindowControl2.HKeepAspectRatio = true;
-            this.hSmartWindowControl2.HMoveContent = true;
-            this.hSmartWindowControl2.HZoomContent = HalconDotNet.HSmartWindowControl.ZoomContent.WheelForwardZoomsIn;
-            this.hSmartWindowControl2.Location = new System.Drawing.Point(48, 63);
-            this.hSmartWindowControl2.Margin = new System.Windows.Forms.Padding(0);
-            this.hSmartWindowControl2.Name = "hSmartWindowControl2";
-            this.hSmartWindowControl2.Size = new System.Drawing.Size(214, 149);
-            this.hSmartWindowControl2.TabIndex = 2;
-            this.hSmartWindowControl2.WindowSize = new System.Drawing.Size(214, 149);
-            this.hSmartWindowControl2.Load += new System.EventHandler(this.hSmartWindowControl2_Load);
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 12;
+            this.listBox1.Location = new System.Drawing.Point(24, 528);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(247, 424);
+            this.listBox1.TabIndex = 15;
             // 
-            // button1
+            // button2
             // 
-            this.button1.Location = new System.Drawing.Point(92, 238);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 49);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Train";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button2.Location = new System.Drawing.Point(92, 448);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(102, 49);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Search";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // groupBox1
             // 
@@ -188,24 +169,43 @@
             this.txtbox_minscore.Size = new System.Drawing.Size(100, 21);
             this.txtbox_minscore.TabIndex = 12;
             // 
-            // button2
+            // button1
             // 
-            this.button2.Location = new System.Drawing.Point(92, 448);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(102, 49);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Search";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button1.Location = new System.Drawing.Point(92, 238);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(102, 49);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Train";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // listBox1
+            // hSmartWindowControl2
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 12;
-            this.listBox1.Location = new System.Drawing.Point(24, 528);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(247, 424);
-            this.listBox1.TabIndex = 15;
+            this.hSmartWindowControl2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.hSmartWindowControl2.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.hSmartWindowControl2.HDoubleClickToFitContent = true;
+            this.hSmartWindowControl2.HDrawingObjectsModifier = HalconDotNet.HSmartWindowControl.DrawingObjectsModifier.None;
+            this.hSmartWindowControl2.HImagePart = new System.Drawing.Rectangle(0, 0, 640, 480);
+            this.hSmartWindowControl2.HKeepAspectRatio = true;
+            this.hSmartWindowControl2.HMoveContent = true;
+            this.hSmartWindowControl2.HZoomContent = HalconDotNet.HSmartWindowControl.ZoomContent.WheelForwardZoomsIn;
+            this.hSmartWindowControl2.Location = new System.Drawing.Point(48, 63);
+            this.hSmartWindowControl2.Margin = new System.Windows.Forms.Padding(0);
+            this.hSmartWindowControl2.Name = "hSmartWindowControl2";
+            this.hSmartWindowControl2.Size = new System.Drawing.Size(214, 149);
+            this.hSmartWindowControl2.TabIndex = 2;
+            this.hSmartWindowControl2.WindowSize = new System.Drawing.Size(214, 149);
+            this.hSmartWindowControl2.Load += new System.EventHandler(this.hSmartWindowControl2_Load);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("微软雅黑", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(52, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(191, 41);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Match Tool";
             // 
             // MatchToolCtr
             // 
