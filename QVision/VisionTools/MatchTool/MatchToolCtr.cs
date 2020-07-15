@@ -96,7 +96,9 @@ namespace QVision.VisionTools.MatchTool
         {
             try
             {
-                tool.Regions.Clear();
+                //HRegion tempRegions = null;
+                tool.Regions = new HRegion();
+                tool.Regions.GenEmptyRegion();
                 listBox1.Items.Clear();
                 hSmartWindowControl1.HalconWindow.ClearWindow();
                 hSmartWindowControl1.HalconWindow.DispImage(tool.himage);
@@ -116,11 +118,19 @@ namespace QVision.VisionTools.MatchTool
                     homMat2D.VectorAngleToRigid(tool.Row[0].D, tool.Column[0].D, 0, tool.Row[i].D, tool.Column[i].D, 0);
                     HRegion rectange = new HRegion(tool.searchRect[0], tool.searchRect[1], tool.searchRect[2], tool.searchRect[3]);
                     HRegion rect2 = rectange.AffineTransRegion(homMat2D, "nearest_neighbor");
-                    tool.Regions.Add(rect2);
+                    tool.Regions=tool.Regions.ConcatObj(rect2);                                      
                 }
 
-                foreach (HRegion r in tool.Regions)
+                tool.Regions=tool.Regions.SelectShape("area", "and", 1, 999999999999999);
+
+                tool.Regions=tool.Regions.SortRegion("character", "true", "row");
+
+                int regionNum = tool.Regions.CountObj();
+                tool.RegionNum = regionNum;
+
+                for(int i=1;i< regionNum+1; i++)
                 {
+                    HRegion r = tool.Regions.SelectObj(i);
                     hSmartWindowControl1.HalconWindow.SetColor("green");
                     hSmartWindowControl1.HalconWindow.SetDraw("margin");
                     hSmartWindowControl1.HalconWindow.DispRegion(r);

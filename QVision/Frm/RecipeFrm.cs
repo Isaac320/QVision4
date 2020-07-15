@@ -8,13 +8,14 @@ using System.Text;
 using System.Windows.Forms;
 using HalconDotNet;
 using QVision.Params;
+using QVision.Tools;
 
 namespace QVision.Frm
 {
     public partial class RecipeFrm : Form
     {
-        public static Dictionary<string, object> Dict = new Dictionary<string, object>();  //字典，用来存放工具，将它序列化成一个二进制文件
 
+        public static Dictionary<string, object> Dict = new Dictionary<string, object>();  //字典，用来存放工具，将它序列化成一个二进制文件
         HImage hImage = null;
         public RecipeFrm()
         {
@@ -83,6 +84,24 @@ namespace QVision.Frm
                 hSmartWindowControl1.HalconWindow.SetPart(0, 0, -2, -2);
             }
         }
-      
+
+        private void bt_save_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string path = @"d:\";
+                string name = "ss.zl";
+                RecipeTool.SerializableNow(path, name, Dict);
+            }
+            catch(Exception ee)
+            {
+                MessageBox.Show(ee.ToString());
+            }
+        }
+
+        private void bt_read_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

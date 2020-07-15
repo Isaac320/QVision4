@@ -37,12 +37,12 @@ namespace QVision.Frm
                 if (Global.mySwitch1)
                 {
                     Global.mySwitch1 = false;
-                    listBoxShowMessage("继续工作");
+                    listBoxShowMessage("Continue");
                 }
 
                 if (Global.mMState == MachineState.Free)
                 {
-                    listBoxShowMessage("开始工作");
+                    listBoxShowMessage("Begin Work");
                     Global.mMState = MachineState.Run;
                 }
             }
@@ -139,7 +139,7 @@ namespace QVision.Frm
             if (Global.ready2Go)
             {
                 Global.mySwitch1 = true;
-                listBoxShowMessage("暂停");
+                listBoxShowMessage("Pause");
             }
         }
 
@@ -148,7 +148,7 @@ namespace QVision.Frm
             if (Global.ready2Go)
             {
                 Global.mySwitch2 = false;
-                listBoxShowMessage("单步");
+                listBoxShowMessage("Step");
             }
         }
 

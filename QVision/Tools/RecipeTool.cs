@@ -7,14 +7,14 @@ using System.Text;
 
 namespace QVision.Tools
 {
-    class SaveRecipe
+    class RecipeTool
     {
         /// <summary>
         /// 序列化
         /// </summary>
         /// <param name="path">路径</param>
         /// <param name="name">名字</param>
-        private void SerializableNow(string path, string name,Dictionary<string,object> Dict)
+        public static void SerializableNow(string path, string name,Dictionary<string,object> Dict)
         {
             FileStream fileStream = new FileStream(path + name, FileMode.Create);
             BinaryFormatter binF = new BinaryFormatter();

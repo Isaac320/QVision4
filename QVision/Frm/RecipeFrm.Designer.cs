@@ -34,9 +34,9 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.bt_save = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.bt_read = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -45,7 +45,7 @@
             this.hSmartWindowControl1 = new HalconDotNet.HSmartWindowControl();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.bt_test = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -132,41 +132,43 @@
             // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.button3);
+            this.panel9.Controls.Add(this.bt_save);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Location = new System.Drawing.Point(97, 3);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(88, 93);
             this.panel9.TabIndex = 1;
             // 
-            // button3
+            // bt_save
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.Location = new System.Drawing.Point(0, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(88, 93);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Save Recipe";
-            this.button3.UseVisualStyleBackColor = true;
+            this.bt_save.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bt_save.Location = new System.Drawing.Point(0, 0);
+            this.bt_save.Name = "bt_save";
+            this.bt_save.Size = new System.Drawing.Size(88, 93);
+            this.bt_save.TabIndex = 1;
+            this.bt_save.Text = "Save Recipe";
+            this.bt_save.UseVisualStyleBackColor = true;
+            this.bt_save.Click += new System.EventHandler(this.bt_save_Click);
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.button2);
+            this.panel8.Controls.Add(this.bt_read);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(3, 3);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(88, 93);
             this.panel8.TabIndex = 0;
             // 
-            // button2
+            // bt_read
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Location = new System.Drawing.Point(0, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(88, 93);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Read Recipe";
-            this.button2.UseVisualStyleBackColor = true;
+            this.bt_read.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bt_read.Location = new System.Drawing.Point(0, 0);
+            this.bt_read.Name = "bt_read";
+            this.bt_read.Size = new System.Drawing.Size(88, 93);
+            this.bt_read.TabIndex = 0;
+            this.bt_read.Text = "Read Recipe";
+            this.bt_read.UseVisualStyleBackColor = true;
+            this.bt_read.Click += new System.EventHandler(this.bt_read_Click);
             // 
             // panel5
             // 
@@ -247,22 +249,22 @@
             // 
             // panel10
             // 
-            this.panel10.Controls.Add(this.button4);
+            this.panel10.Controls.Add(this.bt_test);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel10.Location = new System.Drawing.Point(0, 0);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(188, 100);
             this.panel10.TabIndex = 1;
             // 
-            // button4
+            // bt_test
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.Location = new System.Drawing.Point(0, 0);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(188, 100);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "Test Recipe";
-            this.button4.UseVisualStyleBackColor = true;
+            this.bt_test.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bt_test.Location = new System.Drawing.Point(0, 0);
+            this.bt_test.Name = "bt_test";
+            this.bt_test.Size = new System.Drawing.Size(188, 100);
+            this.bt_test.TabIndex = 1;
+            this.bt_test.Text = "Test Recipe";
+            this.bt_test.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -306,9 +308,9 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button bt_save;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button bt_read;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Panel panel4;
@@ -317,7 +319,7 @@
         private HalconDotNet.HSmartWindowControl hSmartWindowControl1;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button bt_test;
         private System.Windows.Forms.Panel panel2;
     }
 }

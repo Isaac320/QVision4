@@ -17,12 +17,32 @@ namespace QVision.ImgProcess
 
         Thread ImageProcessTh;  //图像处理总线程 
 
+        private static Project instance = new Project();
+
+        VisionTools.MatchTool.MatchTool matchTool;
+
+        private Project() { }
+        
+        public static Project getInstance()
+        {
+            return instance;
+        }
+
+
         public void Init()
         {
             ImageProcessTh = new Thread(machineRun);
             ImageProcessTh.IsBackground = true;
             ImageProcessTh.Start();
 
+        }
+
+        /// <summary>
+        /// 调用配方时候需要初始化这个
+        /// </summary>
+        public void InitRecipe()
+        {
+           matchTool = Global.Dict[Global.ToolName2] as VisionTools.MatchTool.MatchTool;
         }
 
 
@@ -88,7 +108,7 @@ namespace QVision.ImgProcess
                 {
 
                     //进度条作用,每次文件夹里处理图像的百分比
-                    Global.WorkProgressLabel = "处理图像";
+                    Global.WorkProgressLabel = "Image Processing";
                     Global.WorkProgressNum = imageFrameNum * 100 / tempFrameNum;
 
                     //new一个n=0 用来存结果保存在int数组里 长度为每个图片数量乘以每个图片里的产品数量
@@ -108,11 +128,17 @@ namespace QVision.ImgProcess
                         {
                             //读取图像
                             HImage hImage = new HImage(ImageFullName);
+                            Frames.videoFrm.showImage(hImage, 1);
 
+                            matchTool.Image = hImage;
                             //下面随便写个处理过程 无处理
-                            for (int i = 0; i < 6; i++)
+                            for (int i = 1; i < matchTool.RegionNum+1; i++)
                             {
-                                Frames.videoFrm.showImage(hImage, 1);
+                                HRegion region = matchTool.Regions.SelectObj(i);
+                                matchTool.Run(region, out HImage outImage);
+
+                                Frames.videoFrm.showImage(region, 1);
+
                                 FrameResultArr[numFrameResultArr] = 1;
                                 numFrameResultArr++;
                             }
@@ -259,24 +285,24 @@ namespace QVision.ImgProcess
                 int tempLength = info.Length;
                 if (tempLength != 1)
                 {
-                    MessageBox.Show("远程电脑文件夹数量为:" + tempLength.ToString());
+                    MessageBox.Show("Remote PC Folder Num:" + tempLength.ToString());
                 }
                 else
                 {
                     //删除本地目录
-                    Frames.videoFrm.listBoxShowMessage("开始删除本地临时图片目录..");
+                    Frames.videoFrm.listBoxShowMessage("Deleting Temp Images..");
                     FileTool.DeleteDir(Global.TempImagePath);
-                    Frames.videoFrm.listBoxShowMessage("删除完毕");
+                    Frames.videoFrm.listBoxShowMessage("Delete Done");
 
-                    Frames.videoFrm.listBoxShowMessage("开始从远程电脑复制图片...");
+                    Frames.videoFrm.listBoxShowMessage("Copying Images From Remote PC...");
                     FileTool.CopyDirectory(info[0].FullName, Global.TempImagePath, true);   //复制文件夹到本地电脑指定目录下
                     flag = false;
-                    Frames.videoFrm.listBoxShowMessage("复制完毕");
+                    Frames.videoFrm.listBoxShowMessage("Copy Done");
 
                     //删除远程电脑目录下的文件
-                    Frames.videoFrm.listBoxShowMessage("开始删除远程电脑图片...");
+                    Frames.videoFrm.listBoxShowMessage("Deleting Remote PC Images...");
                     FileTool.DeleteDir(Global.XRayImagePath);
-                    Frames.videoFrm.listBoxShowMessage("删除完毕");
+                    Frames.videoFrm.listBoxShowMessage("Delete Done");
                 }
             }
         }
@@ -286,7 +312,7 @@ namespace QVision.ImgProcess
         /// </summary>
         private void EndTray(List<int[]> tempResult)
         {
-            Frames.videoFrm.listBoxShowMessage("托盘完成");
+            Frames.videoFrm.listBoxShowMessage("Tray Finish");
 
             ////写点墨文件
             FileTool.WriteInkPointTxt(tempResult);  //写文件
@@ -305,12 +331,12 @@ namespace QVision.ImgProcess
 
         private void EndLot()
         {
-            Frames.videoFrm.listBoxShowMessage("Lot完成");
+            Frames.videoFrm.listBoxShowMessage("Lot Finish");
 
 
             //写Lot Summary
             FileTool.WriteLotSummary();
-            Frames.videoFrm.listBoxShowMessage("已写入Lot Summary");
+            Frames.videoFrm.listBoxShowMessage("Lot Summary Writed");
 
             Global.mMState = MachineState.Free;   //工作停止
 
@@ -379,7 +405,7 @@ namespace QVision.ImgProcess
 
             }
 
-            Frames.videoFrm.listBoxShowMessage("数据已写入数据库");
+            Frames.videoFrm.listBoxShowMessage("DataBase Writed");
 
         }
 

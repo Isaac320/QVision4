@@ -145,7 +145,7 @@
     <Compile Include="Tools\IniFile.cs" />
     <Compile Include="Tools\LogManager.cs" />
     <Compile Include="Tools\MyConfig.cs" />
-    <Compile Include="Tools\SaveRecipe.cs" />
+    <Compile Include="Tools\RecipeTool.cs" />
     <Compile Include="VisionTools\BParamTool\BParamToolCtr.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -294,6 +294,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="VisionTools\CheckLineTool\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

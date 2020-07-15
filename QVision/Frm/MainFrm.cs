@@ -14,8 +14,7 @@ namespace QVision
 {
     public partial class MainFrm : Form
     {
-
-        ImgProcess.Project project = new ImgProcess.Project();   //图像处理函数
+       
         public MainFrm()
         {
             InitializeComponent();
@@ -85,7 +84,7 @@ namespace QVision
             Frames.videoFrm.Show();
             Frames.videoFrm.Activate();
 
-            project.Init();
+            ImgProcess.Project.getInstance().Init();
 
 
 

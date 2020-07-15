@@ -81,5 +81,9 @@ namespace QVision.Params
 
         public static int needLookNum = 0;  //人工判断后，选择的数字，用来记录到那个数组里
 
+
+        public static Dictionary<string, object> Dict = new Dictionary<string, object>();  //字典，用来存放工具，将它序列化成一个二进制文件
+
+
     }
 }

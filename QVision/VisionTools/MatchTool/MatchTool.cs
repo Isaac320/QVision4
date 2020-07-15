@@ -20,6 +20,7 @@ namespace QVision.VisionTools.MatchTool
         private HTuple column, score, angle;
         private string message = null;
         private HShapeModel myShapeModel = null;
+        
 
         private HHomMat2D homMat;
 
@@ -32,7 +33,11 @@ namespace QVision.VisionTools.MatchTool
         /// <summary>
         /// 这几个region是储存n个搜索区域
         /// </summary>
-        public List<HRegion> Regions = new List<HRegion>();
+        //public List<HRegion> Regions = new List<HRegion>();
+
+        public HRegion Regions = null;
+
+       
 
         #region  属性
         /// <summary>
@@ -46,6 +51,9 @@ namespace QVision.VisionTools.MatchTool
         public HXLDCont Xld { get { return myShapeModel.GetShapeModelContours(1); } }
 
         public HHomMat2D HomMat { get { return homMat; } }
+
+
+        public int RegionNum { get; set; }
 
         public HImage Image
         {
