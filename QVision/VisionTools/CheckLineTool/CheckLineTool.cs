@@ -51,9 +51,16 @@ namespace QVision.VisionTools.CheckLineTool
 
         public void Run()
         {
-            HRegion hRegion = new HRegion(Rect1[0], Rect1[1], Rect1[2], Rect1[3]);
-            HImage ROIImage = himage.ReduceDomain(hRegion);
-            lines = ROIImage.LinesGauss(sigma, low, high, lightDark, "true", "bar-shaped", "true");
+            try
+            {
+                HRegion hRegion = new HRegion(Rect1[0], Rect1[1], Rect1[2], Rect1[3]);
+                HImage ROIImage = himage.ReduceDomain(hRegion);
+                lines = ROIImage.LinesGauss(sigma, low, high, lightDark, "true", "bar-shaped", "true");
+            }
+            catch(Exception ee)
+            {
+
+            }
         }
 
 

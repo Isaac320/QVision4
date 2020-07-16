@@ -32,6 +32,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.hSmartWindowControl1 = new HalconDotNet.HSmartWindowControl();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lb_sigma = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -45,8 +47,6 @@
             this.trackBar2 = new System.Windows.Forms.TrackBar();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -111,6 +111,25 @@
             this.panel2.Size = new System.Drawing.Size(338, 994);
             this.panel2.TabIndex = 1;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(92, 448);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(121, 65);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Run";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(35, 355);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(78, 16);
+            this.checkBox1.TabIndex = 4;
+            this.checkBox1.Text = "real time";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lb_sigma);
@@ -158,6 +177,8 @@
             this.trackBar3.Size = new System.Drawing.Size(148, 45);
             this.trackBar3.TabIndex = 8;
             this.trackBar3.Value = 15;
+            this.trackBar3.Scroll += new System.EventHandler(this.trackBar3_Scroll);
+            this.trackBar3.ValueChanged += new System.EventHandler(this.trackBar3_Scroll);
             // 
             // label6
             // 
@@ -219,11 +240,13 @@
             // trackBar2
             // 
             this.trackBar2.Location = new System.Drawing.Point(57, 130);
-            this.trackBar2.Maximum = 50;
+            this.trackBar2.Maximum = 80;
             this.trackBar2.Name = "trackBar2";
             this.trackBar2.Size = new System.Drawing.Size(148, 45);
             this.trackBar2.TabIndex = 1;
             this.trackBar2.Value = 16;
+            this.trackBar2.Scroll += new System.EventHandler(this.trackBar2_Scroll);
+            this.trackBar2.ValueChanged += new System.EventHandler(this.trackBar2_Scroll);
             // 
             // trackBar1
             // 
@@ -233,6 +256,8 @@
             this.trackBar1.Size = new System.Drawing.Size(148, 45);
             this.trackBar1.TabIndex = 0;
             this.trackBar1.Value = 6;
+            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+            this.trackBar1.ValueChanged += new System.EventHandler(this.trackBar1_Scroll);
             // 
             // label1
             // 
@@ -243,25 +268,6 @@
             this.label1.Size = new System.Drawing.Size(249, 41);
             this.label1.TabIndex = 2;
             this.label1.Text = "CheckLine Tool";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(35, 355);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(78, 16);
-            this.checkBox1.TabIndex = 4;
-            this.checkBox1.Text = "real time";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(92, 448);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 65);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Run";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // CheckLineToolCtr
             // 

@@ -38,7 +38,6 @@ namespace QVision.Frm
                     case Global.ToolName2:
                       //  VisionTools.MacthTool.MatchTool matchTool = (VisionTools.MacthTool.MatchTool)Dict["匹配工具"]; 
                         VisionTools.MatchTool.MatchTool matchTool= (VisionTools.MatchTool.MatchTool)Dict[Global.ToolName2];
-
                         if (hImage != null)
                         {
                             matchTool.Image = hImage;
@@ -61,7 +60,6 @@ namespace QVision.Frm
                         panel2.Controls.Clear();
                         panel2.Controls.Add(checkLineToolCtr);
                         checkLineToolCtr.Dock = DockStyle.Fill;
-
                         break;
                     default:
                         break;
@@ -87,7 +85,6 @@ namespace QVision.Frm
             listBox1.Items.Add(Global.ToolName1);
             listBox1.Items.Add(Global.ToolName2);
             listBox1.Items.Add(Global.ToolName3);
-
 
         }
 
