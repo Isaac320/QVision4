@@ -78,6 +78,7 @@ namespace QVision.VisionTools.MatchTool
             if (tool.Image != null)
             {
                 hSmartWindowControl1.HalconWindow.DispObj(tool.Image);
+                hSmartWindowControl1.HalconWindow.SetPart(0, 0, -2, -2);
             }
 
             txtbox_minscore.Text = tool.minScore.ToString();

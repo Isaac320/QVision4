@@ -153,6 +153,13 @@
       <DependentUpon>BParamToolCtr.cs</DependentUpon>
     </Compile>
     <Compile Include="VisionTools\BParamTool\BParamTool.cs" />
+    <Compile Include="VisionTools\CheckLineTool\CheckLineTool.cs" />
+    <Compile Include="VisionTools\CheckLineTool\CheckLineToolCtr.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisionTools\CheckLineTool\CheckLineToolCtr.Designer.cs">
+      <DependentUpon>CheckLineToolCtr.cs</DependentUpon>
+    </Compile>
     <Compile Include="VisionTools\MatchTool\MatchTool.cs" />
     <Compile Include="VisionTools\MatchTool\MatchToolCtr.cs">
       <SubType>UserControl</SubType>
@@ -211,6 +218,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VisionTools\BParamTool\BParamToolCtr.resx">
       <DependentUpon>BParamToolCtr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisionTools\CheckLineTool\CheckLineToolCtr.resx">
+      <DependentUpon>CheckLineToolCtr.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VisionTools\MatchTool\MatchToolCtr.resx">
       <DependentUpon>MatchToolCtr.cs</DependentUpon>
@@ -295,8 +305,6 @@
   <ItemGroup>
     <None Include="Resources\25.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="VisionTools\CheckLineTool\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

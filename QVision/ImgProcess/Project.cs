@@ -76,8 +76,6 @@ namespace QVision.ImgProcess
 
             while (Global.FrameNum < Global.TotalFrame)
             {
-
-
                 //复制远程电脑上的图片文件夹到自己电脑的目录下
                 // GetImages();
 
@@ -128,7 +126,7 @@ namespace QVision.ImgProcess
                         {
                             //读取图像
                             HImage hImage = new HImage(ImageFullName);
-                            Frames.videoFrm.showImage(hImage, 1);
+                            
 
                             matchTool.Image = hImage;
                             //下面随便写个处理过程 无处理
@@ -137,7 +135,10 @@ namespace QVision.ImgProcess
                                 HRegion region = matchTool.Regions.SelectObj(i);
                                 matchTool.Run(region, out HImage outImage);
 
+                                Frames.videoFrm.showImage(hImage, 1);
                                 Frames.videoFrm.showImage(region, 1);
+
+                                Thread.Sleep(100);
 
                                 FrameResultArr[numFrameResultArr] = 1;
                                 numFrameResultArr++;

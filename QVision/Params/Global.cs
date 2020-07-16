@@ -9,7 +9,7 @@ namespace QVision.Params
     {
         public const string ToolName1 = "Pre Params";
         public const string ToolName2 = "Match Tool";
-        public const string ToolName3 = "Check Lines Tool";
+        public const string ToolName3 = "CheckLine Tool";
 
 
         public static string LotNum = "xxx";
