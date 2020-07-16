@@ -51,8 +51,8 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 79.13257F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.86743F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.4F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.6F));
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -60,7 +60,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1500, 1000);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1600, 1000);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panel1
@@ -69,7 +69,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1180, 994);
+            this.panel1.Size = new System.Drawing.Size(1232, 994);
             this.panel1.TabIndex = 0;
             // 
             // hSmartWindowControl1
@@ -86,9 +86,9 @@
             this.hSmartWindowControl1.Location = new System.Drawing.Point(0, 0);
             this.hSmartWindowControl1.Margin = new System.Windows.Forms.Padding(0);
             this.hSmartWindowControl1.Name = "hSmartWindowControl1";
-            this.hSmartWindowControl1.Size = new System.Drawing.Size(1180, 994);
+            this.hSmartWindowControl1.Size = new System.Drawing.Size(1232, 994);
             this.hSmartWindowControl1.TabIndex = 0;
-            this.hSmartWindowControl1.WindowSize = new System.Drawing.Size(1180, 994);
+            this.hSmartWindowControl1.WindowSize = new System.Drawing.Size(1232, 994);
             this.hSmartWindowControl1.Load += new System.EventHandler(this.hSmartWindowControl1_Load);
             // 
             // panel2
@@ -100,9 +100,9 @@
             this.panel2.Controls.Add(this.hSmartWindowControl2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(1189, 3);
+            this.panel2.Location = new System.Drawing.Point(1241, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(308, 994);
+            this.panel2.Size = new System.Drawing.Size(356, 994);
             this.panel2.TabIndex = 1;
             // 
             // listBox1
@@ -213,7 +213,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "MatchToolCtr";
-            this.Size = new System.Drawing.Size(1500, 1000);
+            this.Size = new System.Drawing.Size(1600, 1000);
             this.Load += new System.EventHandler(this.MatchToolCtr_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -229,7 +229,6 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
-        private HalconDotNet.HSmartWindowControl hSmartWindowControl1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button button2;
@@ -241,5 +240,6 @@
         private System.Windows.Forms.Button button1;
         private HalconDotNet.HSmartWindowControl hSmartWindowControl2;
         private System.Windows.Forms.Label label1;
+        private HalconDotNet.HSmartWindowControl hSmartWindowControl1;
     }
 }

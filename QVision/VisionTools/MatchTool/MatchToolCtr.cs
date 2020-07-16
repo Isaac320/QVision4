@@ -63,6 +63,12 @@ namespace QVision.VisionTools.MatchTool
 
         private void MatchToolCtr_Load(object sender, EventArgs e)
         {
+            if (tool.Image != null)
+            {
+                hSmartWindowControl1.HalconWindow.DispObj(tool.Image);
+                hSmartWindowControl1.HalconWindow.SetPart(0, 0, -2, -2);
+            }
+
             rectTrain = new HDrawingObject(tool.trainRect[0], tool.trainRect[1], tool.trainRect[2], tool.trainRect[3]);
             rectTrain.SetDrawingObjectParams("color", "yellow");
 
@@ -72,20 +78,35 @@ namespace QVision.VisionTools.MatchTool
             rectMask = new HDrawingObject(tool.maskRect[0], tool.maskRect[1], tool.maskRect[2], tool.maskRect[3]);
             rectMask.SetDrawingObjectParams("color", "red");
 
+            rectTrain.OnDrag(hProcess);
+            rectTrain.OnResize(hProcess);
+
+            rectSearch.OnDrag(hProcess);
+            rectSearch.OnResize(hProcess);
+
+            rectMask.OnDrag(hProcess);
+            rectMask.OnResize(hProcess);
+
+
             DrawTrainRegions();
-
-
-            if (tool.Image != null)
-            {
-                hSmartWindowControl1.HalconWindow.DispObj(tool.Image);
-                hSmartWindowControl1.HalconWindow.SetPart(0, 0, -2, -2);
-            }
 
             txtbox_minscore.Text = tool.minScore.ToString();
             txt_numMatch.Text = tool.numMatches.ToString();
         }
 
-        private void DrawTrainRegions()
+        private void hProcess(HDrawingObject dobj, HWindow hwin, string type)
+        {
+            HTuple htemp1 = new HTuple(rectTrain.GetDrawingObjectParams(rectParams));
+            tool.trainRect = new double[4] { htemp1[0], htemp1[1], htemp1[2], htemp1[3] };
+
+            HTuple htemp2 = new HTuple(rectSearch.GetDrawingObjectParams(rectParams));
+            tool.searchRect = new double[4] { htemp2[0], htemp2[1], htemp2[2], htemp2[3] };
+
+            HTuple htemp3 = new HTuple(rectMask.GetDrawingObjectParams(rectParams));
+            tool.maskRect = new double[4] { htemp3[0], htemp3[1], htemp3[2], htemp3[3] };
+        }
+
+            private void DrawTrainRegions()
         {
             hSmartWindowControl1.HalconWindow.AttachDrawingObjectToWindow(rectTrain);
             hSmartWindowControl1.HalconWindow.AttachDrawingObjectToWindow(rectSearch);

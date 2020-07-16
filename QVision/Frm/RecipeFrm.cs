@@ -96,7 +96,7 @@ namespace QVision.Frm
             OpenFileDialog opd = new OpenFileDialog();
             if (opd.ShowDialog() == DialogResult.OK)
             {
-                hImage = new HImage(opd.FileName);
+                hImage = new HImage(opd.FileName).Rgb1ToGray();
                 hSmartWindowControl1.HalconWindow.DispImage(hImage);
                 hSmartWindowControl1.HalconWindow.SetPart(0, 0, -2, -2);
             }
