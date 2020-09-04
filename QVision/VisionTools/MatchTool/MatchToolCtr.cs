@@ -87,7 +87,6 @@ namespace QVision.VisionTools.MatchTool
             rectMask.OnDrag(hProcess);
             rectMask.OnResize(hProcess);
 
-
             DrawTrainRegions();
 
             txtbox_minscore.Text = tool.minScore.ToString();
@@ -106,7 +105,7 @@ namespace QVision.VisionTools.MatchTool
             tool.maskRect = new double[4] { htemp3[0], htemp3[1], htemp3[2], htemp3[3] };
         }
 
-            private void DrawTrainRegions()
+        private void DrawTrainRegions()
         {
             hSmartWindowControl1.HalconWindow.AttachDrawingObjectToWindow(rectTrain);
             hSmartWindowControl1.HalconWindow.AttachDrawingObjectToWindow(rectSearch);

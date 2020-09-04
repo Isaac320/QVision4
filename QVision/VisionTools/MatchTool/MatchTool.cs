@@ -21,9 +21,7 @@ namespace QVision.VisionTools.MatchTool
         private string message = null;
         private HShapeModel myShapeModel = null;
         
-
         private HHomMat2D homMat;
-
 
         public double minScore = 0.5;
         public int numMatches = 1;
@@ -126,8 +124,6 @@ namespace QVision.VisionTools.MatchTool
             }
         }
 
-
-
         /// <summary>
         /// 训练
         /// </summary>
@@ -190,7 +186,6 @@ namespace QVision.VisionTools.MatchTool
             HOperatorSet.GetImagePointer1(obj, out pointer, out type, out width, out heght);
             img.GenImage1(type, width, heght, pointer);
         }
-
 
         public void SetOrgin(double x, double y)
         {

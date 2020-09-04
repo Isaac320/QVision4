@@ -23,7 +23,6 @@ namespace QVision
                 Thread t = new Thread(ShowSplashFrm);
                 t.Start();
                 Thread.Sleep(100);
-
                 Application.Run(new MainFrm());
             }
             catch (Exception ee)

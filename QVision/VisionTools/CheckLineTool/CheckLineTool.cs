@@ -35,6 +35,13 @@ namespace QVision.VisionTools.CheckLineTool
             get { return high; }
         }
 
+        public string LightDark
+        {
+            set { lightDark = value; }
+            get { return lightDark; }
+
+        }
+
 
 
         public HImage Image
