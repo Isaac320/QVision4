@@ -42,11 +42,12 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.bt_readImg = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.hSmartWindowControl1 = new HalconDotNet.HSmartWindowControl();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.bt_test = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.hSmartWindowControl1 = new HalconDotNet.HSmartWindowControl();
+            this.hSmartWindowControl2 = new HalconDotNet.HSmartWindowControl();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -213,30 +214,12 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.hSmartWindowControl1);
+            this.panel3.Controls.Add(this.hSmartWindowControl2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(188, 159);
             this.panel3.TabIndex = 0;
-            // 
-            // hSmartWindowControl1
-            // 
-            this.hSmartWindowControl1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.hSmartWindowControl1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.hSmartWindowControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.hSmartWindowControl1.HDoubleClickToFitContent = true;
-            this.hSmartWindowControl1.HDrawingObjectsModifier = HalconDotNet.HSmartWindowControl.DrawingObjectsModifier.None;
-            this.hSmartWindowControl1.HImagePart = new System.Drawing.Rectangle(0, 0, 640, 480);
-            this.hSmartWindowControl1.HKeepAspectRatio = true;
-            this.hSmartWindowControl1.HMoveContent = true;
-            this.hSmartWindowControl1.HZoomContent = HalconDotNet.HSmartWindowControl.ZoomContent.WheelForwardZoomsIn;
-            this.hSmartWindowControl1.Location = new System.Drawing.Point(0, 0);
-            this.hSmartWindowControl1.Margin = new System.Windows.Forms.Padding(0);
-            this.hSmartWindowControl1.Name = "hSmartWindowControl1";
-            this.hSmartWindowControl1.Size = new System.Drawing.Size(188, 159);
-            this.hSmartWindowControl1.TabIndex = 0;
-            this.hSmartWindowControl1.WindowSize = new System.Drawing.Size(188, 159);
             // 
             // panel7
             // 
@@ -273,6 +256,42 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1594, 994);
             this.panel2.TabIndex = 1;
+            // 
+            // hSmartWindowControl1
+            // 
+            this.hSmartWindowControl1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.hSmartWindowControl1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.hSmartWindowControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.hSmartWindowControl1.HDoubleClickToFitContent = true;
+            this.hSmartWindowControl1.HDrawingObjectsModifier = HalconDotNet.HSmartWindowControl.DrawingObjectsModifier.None;
+            this.hSmartWindowControl1.HImagePart = new System.Drawing.Rectangle(0, 0, 640, 480);
+            this.hSmartWindowControl1.HKeepAspectRatio = true;
+            this.hSmartWindowControl1.HMoveContent = true;
+            this.hSmartWindowControl1.HZoomContent = HalconDotNet.HSmartWindowControl.ZoomContent.WheelForwardZoomsIn;
+            this.hSmartWindowControl1.Location = new System.Drawing.Point(0, 0);
+            this.hSmartWindowControl1.Margin = new System.Windows.Forms.Padding(0);
+            this.hSmartWindowControl1.Name = "hSmartWindowControl1";
+            this.hSmartWindowControl1.Size = new System.Drawing.Size(188, 159);
+            this.hSmartWindowControl1.TabIndex = 0;
+            this.hSmartWindowControl1.WindowSize = new System.Drawing.Size(188, 159);
+            // 
+            // hSmartWindowControl2
+            // 
+            this.hSmartWindowControl2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.hSmartWindowControl2.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.hSmartWindowControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.hSmartWindowControl2.HDoubleClickToFitContent = true;
+            this.hSmartWindowControl2.HDrawingObjectsModifier = HalconDotNet.HSmartWindowControl.DrawingObjectsModifier.None;
+            this.hSmartWindowControl2.HImagePart = new System.Drawing.Rectangle(0, 0, 640, 480);
+            this.hSmartWindowControl2.HKeepAspectRatio = true;
+            this.hSmartWindowControl2.HMoveContent = true;
+            this.hSmartWindowControl2.HZoomContent = HalconDotNet.HSmartWindowControl.ZoomContent.WheelForwardZoomsIn;
+            this.hSmartWindowControl2.Location = new System.Drawing.Point(0, 0);
+            this.hSmartWindowControl2.Margin = new System.Windows.Forms.Padding(0);
+            this.hSmartWindowControl2.Name = "hSmartWindowControl2";
+            this.hSmartWindowControl2.Size = new System.Drawing.Size(188, 159);
+            this.hSmartWindowControl2.TabIndex = 0;
+            this.hSmartWindowControl2.WindowSize = new System.Drawing.Size(188, 159);
             // 
             // RecipeFrm
             // 
@@ -321,5 +340,6 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Button bt_test;
         private System.Windows.Forms.Panel panel2;
+        private HalconDotNet.HSmartWindowControl hSmartWindowControl2;
     }
 }
