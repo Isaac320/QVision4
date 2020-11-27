@@ -9,7 +9,7 @@ namespace QVision.Frm
 {
     public class Frames
     {
-        public static RecipeFrm recipeFrm;
+       // public static RecipeFrm recipeFrm;
         public static SettingFrm settingFrm;
         public static VideoFrm videoFrm;
         public static ReportFrm reportFrm;

@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using QVision.Params;
 using QVision.Tools;
-using HalconDotNet;
+//using HalconDotNet;
 
 namespace QVision.Frm
 {
@@ -48,20 +48,20 @@ namespace QVision.Frm
             }
         }
 
-        public void showImage(HObject obj, int index)
-        {
-            HOperatorSet.SetDraw(hSmartWindowControl1.HalconWindow, "margin");
-            HOperatorSet.SetLineWidth(hSmartWindowControl1.HalconWindow, 2);
-            if (index == 1)
-            {
-                HOperatorSet.SetColor(hSmartWindowControl1.HalconWindow, "red");
-            }
-            else
-            {
-                HOperatorSet.SetColor(hSmartWindowControl1.HalconWindow, "red");
-            }
-            hSmartWindowControl1.HalconWindow.DispObj(obj);
-        }
+        //public void showImage(HObject obj, int index)
+        //{
+        //    HOperatorSet.SetDraw(hSmartWindowControl1.HalconWindow, "margin");
+        //    HOperatorSet.SetLineWidth(hSmartWindowControl1.HalconWindow, 2);
+        //    if (index == 1)
+        //    {
+        //        HOperatorSet.SetColor(hSmartWindowControl1.HalconWindow, "red");
+        //    }
+        //    else
+        //    {
+        //        HOperatorSet.SetColor(hSmartWindowControl1.HalconWindow, "red");
+        //    }
+        //    hSmartWindowControl1.HalconWindow.DispObj(obj);
+        //}
 
         public void ShowList()
         {
@@ -152,9 +152,9 @@ namespace QVision.Frm
             }
         }
 
-        private void hSmartWindowControl1_Load(object sender, EventArgs e)
-        {
-            hSmartWindowControl1.MouseWheel += hSmartWindowControl1.HSmartWindowControl_MouseWheel;
-        }
+        //private void hSmartWindowControl1_Load(object sender, EventArgs e)
+        //{
+        //    hSmartWindowControl1.MouseWheel += hSmartWindowControl1.HSmartWindowControl_MouseWheel;
+        //}
     }
 }

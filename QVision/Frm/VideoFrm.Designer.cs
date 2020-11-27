@@ -32,7 +32,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.hSmartWindowControl1 = new HalconDotNet.HSmartWindowControl();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -63,6 +62,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -85,6 +85,7 @@
             this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -126,31 +127,12 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.hSmartWindowControl1);
+            this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1350, 988);
             this.panel3.TabIndex = 0;
-            // 
-            // hSmartWindowControl1
-            // 
-            this.hSmartWindowControl1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.hSmartWindowControl1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.hSmartWindowControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.hSmartWindowControl1.HDoubleClickToFitContent = true;
-            this.hSmartWindowControl1.HDrawingObjectsModifier = HalconDotNet.HSmartWindowControl.DrawingObjectsModifier.None;
-            this.hSmartWindowControl1.HImagePart = new System.Drawing.Rectangle(0, 0, 640, 480);
-            this.hSmartWindowControl1.HKeepAspectRatio = true;
-            this.hSmartWindowControl1.HMoveContent = true;
-            this.hSmartWindowControl1.HZoomContent = HalconDotNet.HSmartWindowControl.ZoomContent.WheelForwardZoomsIn;
-            this.hSmartWindowControl1.Location = new System.Drawing.Point(0, 0);
-            this.hSmartWindowControl1.Margin = new System.Windows.Forms.Padding(0);
-            this.hSmartWindowControl1.Name = "hSmartWindowControl1";
-            this.hSmartWindowControl1.Size = new System.Drawing.Size(1350, 988);
-            this.hSmartWindowControl1.TabIndex = 0;
-            this.hSmartWindowControl1.WindowSize = new System.Drawing.Size(1350, 988);
-            this.hSmartWindowControl1.Load += new System.EventHandler(this.hSmartWindowControl1_Load);
             // 
             // panel2
             // 
@@ -478,6 +460,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "In.D Solution";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(1350, 988);
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
             // VideoFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -511,6 +503,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -521,7 +514,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel panel3;
-        private HalconDotNet.HSmartWindowControl hSmartWindowControl1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Panel panel7;
@@ -552,5 +544,6 @@
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

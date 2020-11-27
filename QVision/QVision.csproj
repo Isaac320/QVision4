@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>QVision</RootNamespace>
     <AssemblyName>QVision</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,10 +32,36 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="halcondotnet">
-      <HintPath>..\..\..\..\..\..\Program Files\MVTec\HALCON-17.12-Progress\bin\dotnet20\halcondotnet.dll</HintPath>
+    <Reference Include="Google.Protobuf, Version=3.12.3.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x64\Debug\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenCvSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x64\Debug\OpenCvSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -84,12 +111,6 @@
     <Compile Include="Frm\MainFrm.Designer.cs">
       <DependentUpon>MainFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm\RecipeFrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm\RecipeFrm.Designer.cs">
-      <DependentUpon>RecipeFrm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Frm\SettingFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,10 +135,13 @@
     <Compile Include="Frm\VideoFrm.Designer.cs">
       <DependentUpon>VideoFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ImgProcess\AidiProcess.cs" />
+    <Compile Include="ImgProcess\aidi_vision.cs" />
+    <Compile Include="ImgProcess\ImageConverter.cs" />
+    <Compile Include="ImgProcess\Label.cs" />
     <Compile Include="ImgProcess\Project.cs" />
     <Compile Include="Params\Common.cs" />
     <Compile Include="Params\Global.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register\RegFrm.cs">
       <SubType>Form</SubType>
@@ -145,28 +169,8 @@
     <Compile Include="Tools\IniFile.cs" />
     <Compile Include="Tools\LogManager.cs" />
     <Compile Include="Tools\MyConfig.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Tools\RecipeTool.cs" />
-    <Compile Include="VisionTools\BParamTool\BParamToolCtr.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="VisionTools\BParamTool\BParamToolCtr.Designer.cs">
-      <DependentUpon>BParamToolCtr.cs</DependentUpon>
-    </Compile>
-    <Compile Include="VisionTools\BParamTool\BParamTool.cs" />
-    <Compile Include="VisionTools\CheckLineTool\CheckLineTool.cs" />
-    <Compile Include="VisionTools\CheckLineTool\CheckLineToolCtr.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="VisionTools\CheckLineTool\CheckLineToolCtr.Designer.cs">
-      <DependentUpon>CheckLineToolCtr.cs</DependentUpon>
-    </Compile>
-    <Compile Include="VisionTools\MatchTool\MatchTool.cs" />
-    <Compile Include="VisionTools\MatchTool\MatchToolCtr.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="VisionTools\MatchTool\MatchToolCtr.Designer.cs">
-      <DependentUpon>MatchToolCtr.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Frm\AboutFrm.resx">
       <DependentUpon>AboutFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,9 +185,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm\MainFrm.resx">
       <DependentUpon>MainFrm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm\RecipeFrm.resx">
-      <DependentUpon>RecipeFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm\SettingFrm.resx">
       <DependentUpon>SettingFrm.cs</DependentUpon>
@@ -215,15 +216,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report\ReportFrm.resx">
       <DependentUpon>ReportFrm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VisionTools\BParamTool\BParamToolCtr.resx">
-      <DependentUpon>BParamToolCtr.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VisionTools\CheckLineTool\CheckLineToolCtr.resx">
-      <DependentUpon>CheckLineToolCtr.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VisionTools\MatchTool\MatchToolCtr.resx">
-      <DependentUpon>MatchToolCtr.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">

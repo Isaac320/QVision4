@@ -45,7 +45,7 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Right;
             this.menuStrip1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -54,9 +54,9 @@
             this.toolStripMenuItem3,
             this.toolStripMenuItem4,
             this.toolStripMenuItem5});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Location = new System.Drawing.Point(1110, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(109, 645);
+            this.menuStrip1.Size = new System.Drawing.Size(126, 645);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -65,7 +65,7 @@
             this.toolStripMenuItem1.Image = global::QVision.Properties.Resources._10;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(96, 81);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(113, 81);
             this.toolStripMenuItem1.Text = "Home Page";
             this.toolStripMenuItem1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
@@ -75,7 +75,7 @@
             this.toolStripMenuItem2.Image = global::QVision.Properties.Resources._2;
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(96, 81);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(113, 81);
             this.toolStripMenuItem2.Text = "Recipe Edit";
             this.toolStripMenuItem2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
@@ -85,7 +85,7 @@
             this.toolStripMenuItem3.Image = global::QVision.Properties.Resources._41;
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
             this.toolStripMenuItem3.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(96, 81);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(113, 81);
             this.toolStripMenuItem3.Text = "Config";
             this.toolStripMenuItem3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
@@ -95,7 +95,7 @@
             this.toolStripMenuItem4.Image = global::QVision.Properties.Resources._58;
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
             this.toolStripMenuItem4.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(96, 81);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(113, 81);
             this.toolStripMenuItem4.Text = "Report";
             this.toolStripMenuItem4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
@@ -108,20 +108,20 @@
             this.toolStripMenuItem5.Image = global::QVision.Properties.Resources._337;
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
             this.toolStripMenuItem5.Padding = new System.Windows.Forms.Padding(0, 8, 0, 8);
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(96, 81);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(113, 81);
             this.toolStripMenuItem5.Text = "Help";
             this.toolStripMenuItem5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // 帮助文档ToolStripMenuItem
             // 
             this.帮助文档ToolStripMenuItem.Name = "帮助文档ToolStripMenuItem";
-            this.帮助文档ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.帮助文档ToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
             this.帮助文档ToolStripMenuItem.Text = "Document";
             // 
             // 关于ToolStripMenuItem
             // 
             this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
-            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
             this.关于ToolStripMenuItem.Text = "About";
             this.关于ToolStripMenuItem.Click += new System.EventHandler(this.关于ToolStripMenuItem_Click);
             // 
@@ -129,9 +129,9 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(109, 623);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 623);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1127, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1110, 22);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 

@@ -45,24 +45,24 @@ namespace QVision
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Cursor.Current = Cursors.WaitCursor;
-                if (this.ActiveMdiChild == Frames.recipeFrm)
-                {
-                    Cursor.Current = Cursors.Arrow;
-                    return;
-                }
-                Frames.recipeFrm.MdiParent = this;
-                Frames.recipeFrm.Dock = DockStyle.Fill;
-                Frames.recipeFrm.Show();
-                Frames.recipeFrm.Activate();
-                Cursor.Current = Cursors.Arrow;
-            }
-            catch (Exception ee)
-            {
-                MessageBox.Show(ee.ToString());
-            }
+            //try
+            //{
+            //    Cursor.Current = Cursors.WaitCursor;
+            //    if (this.ActiveMdiChild == Frames.recipeFrm)
+            //    {
+            //        Cursor.Current = Cursors.Arrow;
+            //        return;
+            //    }
+            //    Frames.recipeFrm.MdiParent = this;
+            //    Frames.recipeFrm.Dock = DockStyle.Fill;
+            //    Frames.recipeFrm.Show();
+            //    Frames.recipeFrm.Activate();
+            //    Cursor.Current = Cursors.Arrow;
+            //}
+            //catch (Exception ee)
+            //{
+            //    MessageBox.Show(ee.ToString());
+            //}
 
         }
 
@@ -70,7 +70,7 @@ namespace QVision
         {
             SplashFrm.num = 30;
             Frames.videoFrm = new VideoFrm();
-            Frames.recipeFrm = new RecipeFrm();
+           // Frames.recipeFrm = new RecipeFrm();
             Frames.settingFrm = new SettingFrm();
             Frames.reportFrm = new ReportFrm();
             SplashFrm.num = 60;

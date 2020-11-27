@@ -4,7 +4,6 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using QVision.Params;
-using HalconDotNet;
 using System.Windows.Forms;
 using QVision.Frm;
 using QVision.Tools;
@@ -19,7 +18,7 @@ namespace QVision.ImgProcess
 
         private static Project instance = new Project();
 
-        VisionTools.MatchTool.MatchTool matchTool;
+       // VisionTools.MatchTool.MatchTool matchTool;
 
         private Project() { }
         
@@ -42,7 +41,7 @@ namespace QVision.ImgProcess
         /// </summary>
         public void InitRecipe()
         {
-           matchTool = Global.Dict[Global.ToolName2] as VisionTools.MatchTool.MatchTool;
+           //matchTool = Global.Dict[Global.ToolName2] as VisionTools.MatchTool.MatchTool;
         }
 
 
@@ -125,24 +124,24 @@ namespace QVision.ImgProcess
                         if (File.Exists(ImageFullName))
                         {
                             //读取图像
-                            HImage hImage = new HImage(ImageFullName);
+                            //HImage hImage = new HImage(ImageFullName);
                             
 
-                            matchTool.Image = hImage;
+                            //matchTool.Image = hImage;
                             //下面随便写个处理过程 无处理
-                            for (int i = 1; i < matchTool.RegionNum+1; i++)
-                            {
-                                HRegion region = matchTool.Regions.SelectObj(i);
-                                matchTool.Run(region, out HImage outImage);
+                            //for (int i = 1; i < matchTool.RegionNum+1; i++)
+                            //{
+                            //    //HRegion region = matchTool.Regions.SelectObj(i);
+                            //    //matchTool.Run(region, out HImage outImage);
 
-                                Frames.videoFrm.showImage(hImage, 1);
-                                Frames.videoFrm.showImage(region, 1);
+                            //    //Frames.videoFrm.showImage(hImage, 1);
+                            //    //Frames.videoFrm.showImage(region, 1);
 
-                                Thread.Sleep(100);
+                            //    Thread.Sleep(100);
 
-                                FrameResultArr[numFrameResultArr] = 1;
-                                numFrameResultArr++;
-                            }
+                            //    FrameResultArr[numFrameResultArr] = 1;
+                            //    numFrameResultArr++;
+                            //}
                             #region   处理过程 需要重写
 
                             //        //循环读取region，并处理
